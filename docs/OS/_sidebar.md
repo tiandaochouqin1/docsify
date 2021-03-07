@@ -1,7 +1,7 @@
 
 <!-- docs/_sidebar.md -->
 * [知识手册](/)
-* [OSC-Chapter1-2](./OS/OSC-Chapter1-2.md "Chapter1-2")
+* [OSC-Chapter1-2](./OS/OSC-Chapter1-2.md)
 * [OSC-Chapter3](./OS/OSC-Chapter3.md)
 * [OSC-Chapter4-5](./OS/OSC-Chapter4-5.md)
 * [OSC-Chapter6-7](./OS/OSC-Chapter6-7.md)
