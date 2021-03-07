@@ -1,5 +1,7 @@
 
 <!-- docs/_sidebar.md -->
-* [Home](/)
+* [知识手册](/)
 * [NetWork](/NetWork/)
-* [ADB](ADB.md)
+* [OS](/OS/)
+* [Code](/Code/)
+* [Web](/Web/)
