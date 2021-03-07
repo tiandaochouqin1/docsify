@@ -1,7 +1,4 @@
 # Headline
 
-> An awesome project.
-
-
-homepage
+> This is Code
 
