@@ -1,6 +1,6 @@
 
 
-* [知识手册](/)
+* [HOME](/)
 * [OSC-Chapter1-2](./OS/OSC-Chapter1-2.md)
 * [OSC-Chapter3](./OS/OSC-Chapter3.md)
 * [OSC-Chapter4-5](./OS/OSC-Chapter4-5.md)
