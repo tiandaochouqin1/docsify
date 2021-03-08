@@ -10,4 +10,5 @@
 
 
 [Blog](https://webxp.ml/)
-[NoteBook](https://lfyweb.ml/)
+[NoteBook](#docsify)
+<!-- [NoteBook](https://lfyweb.ml/) -->
