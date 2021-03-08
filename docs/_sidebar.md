@@ -1,6 +1,8 @@
 
 <!-- docs/_sidebar.md -->
-* [知识手册](/)
+<!-- 文件路径前不要带./ -->
+
+* [NoteBook](/)
 * [Network](/Net/)
 * [OS](/OS/)
 * [Code](/Code/)
