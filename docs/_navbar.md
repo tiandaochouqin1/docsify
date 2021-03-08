@@ -1,6 +1,9 @@
 
 <!-- docs/_sidebar.md -->
 * [Home](/)
-* [NetWork](/NetWork/)
-* [En](/)
-* [chinese](/zh-cn/)
+  * [Network](/Net/)
+  * [OS](/OS/)
+  * [Code](/Code/)
+  * [Web](/Web/)
+
+* [NetDisk](https://webxp.ml/onedrive/)
