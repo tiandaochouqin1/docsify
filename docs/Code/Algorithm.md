@@ -31,8 +31,8 @@ LM(Levenberg-Marquardt)算法属于信赖域法，将变量行走的长度 [公�
 4. 把dist按递增的顺序，选择一个最短路径，从V−S把对应顶点加入到S中，每次S中加入一个新顶点u , 需要对dist更新，即s能否通过顶点u达到其他顶点更近。 即若`dist[u] + arc[u][v] < dist[v]`,则更新  `dist[v]=dist[u]+arc[u][v]`
 5. 重复上述步骤，直到S=V
 
-![Dijkstra](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images /dijkstra.png)
-![Dijkstra2](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images /dijkstra_2.png)
+![Dijkstra](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/dijkstra.png)
+![Dijkstra2](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/dijkstra_2.png)
 
 [dijkstra算法](https://blog.csdn.net/luoshixian099/article/details/51918844)
 [WikiPeidia](https://zh.wikipedia.org/wiki/%E6%88%B4%E5%85%8B%E6%96%AF%E7%89%B9%E6%8B%89%E7%AE%97%E6%B3%95)

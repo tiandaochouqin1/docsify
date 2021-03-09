@@ -41,7 +41,7 @@ RegexBuddy：强大的正则表达式学习、分析及调试工具。付费。
 
 
 # 基本语法
-![Regex](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images /regex.png)
+![Regex](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/regex.png)
 
 ## 基本匹配
 大小写敏感
@@ -203,7 +203,7 @@ NFA:有ε边或者某个节点对同一输入对应多个状态。ε边可以在
 
 
 
-[FiniteAutomation](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images /FiniteAutomation.png)
+[FiniteAutomation](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/FiniteAutomation.png)
 
 
 NFA的引擎建图时间复杂度是O(n)，但匹配一个长度为m的字符串时因为涉及到大量的递归和回溯，最坏时间复杂度是O(mn)。
@@ -212,7 +212,7 @@ DFA引擎的建图时间复杂度O(n^2)，但匹配时没有回溯，所以匹�
 # RegexBuddy分析与调试
 正则表达式学习、分析及调试工具。支持 C++、Java、JavaScript、Python 等十几种主流编程语言。通过 RegexBuddy，能看到正则一步步执行匹配的过程。
 
-![RegexBuddy](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images /RegexBuddy.jpg)
+![RegexBuddy](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/RegexBuddy.jpg)
 
 
 * debug：选中测试文本，点击 debug 就可以进入 RegexBuddy 的 debug 模式
