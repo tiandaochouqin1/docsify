@@ -6,9 +6,12 @@
 
 > A magical documentation site generator.
 
+> Roll Down ↓
 
 
 
-[Blog](https://webxp.ml/)
-[NoteBook](#docsify)
-<!-- [NoteBook](https://lfyweb.ml/) -->
+
+
+[NoteBook](https://lfyweb.ml/)
+[Go To Blog](https://webxp.ml/)
+<!-- [NoteBook](#docsify) -->

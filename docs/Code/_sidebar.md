@@ -7,6 +7,3 @@
 * [Java](/Code/Java.md)
 * [regex](/Code/regex.md)
 * [MySQL](/Code/MySQL.md)
-* [MySQL](/Code/MySQL.md)
-* [MySQL](/Code/MySQL.md)
-* [MySQL](/Code/MySQL.md)

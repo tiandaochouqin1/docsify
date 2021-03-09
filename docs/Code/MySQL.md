@@ -16,6 +16,7 @@ date: 2021-03-02 23:52:07
 - [MySQL Tutorial](#mysql-tutorial)
   - [JOIN](#join)
   - [DDL数据定义语言](#ddl数据定义语言)
+  - [TODO](#todo)
 - [MySQL实战45讲](#mysql实战45讲)
   - [框架](#框架)
   - [日志模块](#日志模块)
@@ -24,8 +25,10 @@ date: 2021-03-02 23:52:07
   - [全局锁表级锁行锁](#全局锁表级锁行锁)
   - [排序](#排序)
   - [计数](#计数)
+  - [TODO](#todo-1)
 
 # MySQL
+
 [课程配图链接](https://github.com/cystanford/SQL-XMind)
 
 关系型数据库（RDBMS）就是建立在关系模型基础上的数据库，SQL 就是关系型数据库的查询语言。
@@ -156,7 +159,7 @@ A FOREIGN KEY
 2. LEFT JOIN ： returns all records from the left table (table1), and the matched records from the right table (table2). The result is NULL from the right side, if there is no match.
 3. RIGHT JOIN： returns all records from the right table (table2), and the matched records from the left table (table1). The result is NULL from the left side, when there is no match.
 
-[Tutorial 看到此处](https://dev.mysql.com/doc/refman/8.0/en/example-auto-increment.html)
+
 
 ## DDL数据定义语言
 数据库定义： `CREATE DATABASE,DROP DATABSE`
@@ -165,7 +168,8 @@ A FOREIGN KEY
 约束：主键、外键、唯一性、NOT NULL、DEFAULT、CHECK
 
 05丨检索数据：你还在SELECT * 么？
-
+## TODO
+[Tutorial 看到此处](https://dev.mysql.com/doc/refman/8.0/en/example-auto-increment.html)
 
 # MySQL实战45讲
 一条update语句的执行过程：
@@ -386,3 +390,9 @@ where id = 10000 -1
 ```
 
 查询语句慢定位
+
+
+
+
+## TODO
+> MySQL实战45讲-第20讲 幻读是什么
