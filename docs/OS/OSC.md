@@ -8,6 +8,7 @@ categories: 课程学习
 
 <!-- more -->
 
+- [OSC](#osc)
 - [导论](#导论)
 - [操作系统结构](#操作系统结构)
 - [进程](#进程)
@@ -32,6 +33,8 @@ categories: 课程学习
 - [I/O系统](#io系统)
 - [系统保护](#系统保护)
 - [系统安全](#系统安全)
+
+# OSC
 # 导论
 **操作系统**是一直运行在计算机上的程序（通常称为内核）。为程序和用户分配资源，使用户使用方便。
 **引导程序**一般位于计算机的固件，如ROM或EEOROM（Electrically Erasable Programable Read-Only Memory)。

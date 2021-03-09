@@ -9,6 +9,7 @@ date: 2020-09-28 23:10:37
 <center> </center>
 
 <!-- more -->
+- [REGEX](#regex)
 - [基本语法](#基本语法)
   - [基本匹配](#基本匹配)
   - [元字符](#元字符)
@@ -30,6 +31,9 @@ date: 2020-09-28 23:10:37
   - [有穷自动机](#有穷自动机)
 - [RegexBuddy分析与调试](#regexbuddy分析与调试)
 - [Python中的使用](#python中的使用)
+
+
+# REGEX
 
 [learn-regex-Github](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)，入门必读。
 [你是如何学会正则表达式的？](https://www.zhihu.com/question/48219401/answer/1476436385)：入门后需要深入学习的内容。

@@ -333,21 +333,26 @@ Slow Query Log：
 Stored Programs：
 
 ## 全局锁表级锁行锁
-FTWRL：Flush Tables With Read Lock，全局读锁，即只读，其它命令会被阻塞。适用于全局逻辑备份。
-mysqldump使用 -single-transaction参数来启动事务也可得到一致性视图，但必须姻亲支持事务。
+FTWRL：Flush Tables With Read Lock，**全局读锁**，即只读，其它命令会被阻塞，一般用于全局逻辑备份。mysqldump使用 `-single-transaction`参数来启动事务也可得到一致性视图，但必须引擎支持事务。
 
 表级锁：
-1. 表锁：lock tables … read/write加锁。unlock主动释放或客户端断开时释放。
-2. MDL锁：访问表时自动加，以保证读写的正确性。事务提交时释放锁。读锁不互斥，有写锁时互斥。
-3. 行锁：InnoDB支持，MyISAM不支持。
+1. 表锁：`lock tables … read/write`加锁。unlock主动释放或客户端断开时释放。
+2. MDL锁：访问表时**自动加**，以保证读写的正确性。事务提交时释放锁。读锁不互斥，有写锁时互斥。
+3. 行锁：InnoDB支持，MyISAM不支持。需要时才会加行锁，见两阶段协议。
 4. 两阶段协议：InnoDB事务中，在需要时才会加行锁，到事务提交才会释放锁。故在事务中尽量把可能造成锁冲突、影响并发度的所往后放。
 
 死锁：
-- 等待超时机制；
-- 死锁检测机制：并发量大时cpu资源消耗大。
+- 等待超时机制；`innodb_lock_wait_timeout` 
+- 死锁检测机制：`innodb_deadlock_detect`并发量大时cpu资源消耗大。
 - 控制并发量，如使用中间件、排队策略等。
 
+查询语句返回慢：
+1. 等MDL锁：show processlist
+2. 等flush：
+3. 等行锁：
 
+查询慢：
+1. select默认为一致性读，当事务进行中要读取的行被修改过很多次时，本查询需要进行多次undo才能获得一致性结果。当前读的命令为`lock in share mode`。
 
 ## 排序
 ORDER BY
@@ -389,10 +394,20 @@ where id = 10000 -1
 
 ```
 
-查询语句慢定位
 
 
 
 
 ## TODO
 > MySQL实战45讲-第20讲 幻读是什么
+1. 后面的课程含金量逐渐下降；
+2. 内容较为分散，体系不够清晰；
+3. 部分内容覆盖不完整（与其它网络资料相比）。
+
+1. 可选择感兴趣的问题看，作为问题手册，而不是学习文档；
+2. 考虑找本书先看看（`数据库系统概念/高性能MYSQL`）。
+
+**数据库的关键内容：**
+- 并发与锁
+- log与恢复
+- 表设计与性能
