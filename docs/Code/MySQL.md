@@ -164,10 +164,13 @@ A FOREIGN KEY
 ## DDL数据定义语言
 数据库定义： `CREATE DATABASE,DROP DATABSE`
 数据表定义： `CREATE TABLE [table_name](),ALTER TABLE`
+
 可视化管理和设计工具：Navicat、MySQL Workbench
 约束：主键、外键、唯一性、NOT NULL、DEFAULT、CHECK
 
-05丨检索数据：你还在SELECT * 么？
+DDL:Data Definition Languages, creat 、drop、 alter；
+DML:Data Manipulation Language,insert 、delete、update、select\；
+DCL:Data Control Language,grant 、revoke。
 ## TODO
 [Tutorial 看到此处](https://dev.mysql.com/doc/refman/8.0/en/example-auto-increment.html)
 
@@ -405,7 +408,21 @@ where id = 10000 -1
 3. 部分内容覆盖不完整（与其它网络资料相比）。
 
 1. 可选择感兴趣的问题看，作为问题手册，而不是学习文档；
-2. 考虑找本书先看看（`数据库系统概念/高性能MYSQL`）。
+2. 需要复习；
+3. 考虑找本书先看看（`数据库系统概念/高性能MYSQL`）。
+
+
+**参考资料：**
+
+1. [『浅入浅出』MySQL 和 InnoDB](https://draveness.me/mysql-innodb/)
+
+2. [快速理解脏读、不可重复读、幻读和MVCC](https://cloud.tencent.com/developer/article/1450773)
+
+3. [B树和B+树的插入、删除图文详解](https://www.cnblogs.com/nullzx/p/8729425.html)
+
+4. [MySQL 事务隔离级别和锁](https://developer.ibm.com/zh/technologies/databases/articles/os-mysql-transaction-isolation-levels-and-locks/)
+
+
 
 **数据库的关键内容：**
 - 并发与锁
