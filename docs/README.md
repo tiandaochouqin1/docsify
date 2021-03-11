@@ -1,7 +1,8 @@
 
-> An awesome project.
+> An awesome notebook.
 
 
-homepage
+HOME
 
-![UML关系](/images/UMLRelations.jpg)
+<!-- 文件路径前不要带./; 第一个一级标题会被忽略 -->
+<!-- 图片引用可使用相对路径，但需要注意将文章统一到同一层级，以便于迁移（许多网络无法直接加载直接引用的独立github仓库的图片） -->
