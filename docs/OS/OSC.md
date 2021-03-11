@@ -39,7 +39,7 @@ categories: 课程学习
 事件的发生通常通过硬件或软件的中断来通知。硬件通过系统总线发送信号到CPU，以触发中断；软件通过系统调用（也称为监督程序调用）以触发中断。
 CPU只能从内存中加载指令，因此执行程序必须位于内存中。通用计算机运行的大多数程序位于可读内存，一般为**动态随机访问内存（DRAM）**。
 
- <img  src="../images/StorageDevices.jpg" alt="存储设备结构" width=350   align=center >  
+<img  src="../images/StorageDevices.jpg" alt="存储设备结构" width=350   align=center >  
   
 操作系统的大部分代码用于I/O管理。**设备驱动程序**负责设备控制器，并为操作系统的其他部分提供统一的设备访问接口。
 
