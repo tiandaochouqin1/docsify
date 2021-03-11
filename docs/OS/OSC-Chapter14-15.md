@@ -31,7 +31,7 @@ categories: 课程学习
 
 **访问矩阵**
 访问矩阵是一个通用的保护模型，它提供了一种保护机制，而无需对系统或用户施加特定的保护策略。行表示域，列表示对象。
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/matrix.jpg" alt="访问矩阵" width=500  align=center >
+<img  src="../images/matrix.jpg" alt="访问矩阵" width=500  align=center >
 策略和机制的分离是重要的设计原则。
 * switch切换：切换进程从一个域到另一个域。
 * copy复制：复制访问矩阵的一个域的访问权限到另外一个。
@@ -106,8 +106,8 @@ SSL在传输层提供安全。
 预防或检测安全事故的方法包括：入侵检测系统、防病毒软件、系统事件的审计和记录、系统软件更改的监控、系统调用监控和防火墙。
 
 ***
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/linux.jpg" alt="Linux系统结构" width=450  align=center >
+<img  src="../images/linux.jpg" alt="Linux系统结构" width=450  align=center >
 
 ***
 
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/windows.jpg" alt="Windows结构图" width=600  align=center >
+<img  src="../images/windows.jpg" alt="Windows结构图" width=600  align=center >

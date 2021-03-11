@@ -25,7 +25,7 @@ categories: 课程学习
 
 ## 进程的概念
 进程不只是程序代码，程序代码有时称为文本段。进程还包括当前活动，如程序计数器的值和处理器寄存器的内容等。进程还包括：进程堆栈和数据段，还可能包括堆。**进程的内存结构**如图所示：
- <img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/processinmemory.png" alt="进程的内存结构" width=200   align=center > 
+ <img  src="../images/processinmemory.png" alt="进程的内存结构" width=200   align=center > 
 * 文本：程序代码。
 * 堆栈：临时数据，如如函数参数、返回地址和局部变量。
 * 数据段：包括全局变量。
@@ -41,7 +41,7 @@ categories: 课程学习
 * I/O状态信息：包括分配给进程的I/O设备列表和打开文件列表。
 在支持线程的系统中，PCB被扩展到每个线程的信息。
 
- <img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/cpuswitch.png" alt="进程调度队列" width=600  align=center > 
+ <img  src="../images/cpuswitch.png" alt="进程调度队列" width=600  align=center > 
 
 
 ## 进程调度
@@ -54,7 +54,7 @@ categories: 课程学习
 **就绪队列**：驻留在内存中的、就绪的、等待运行的进程。通常用链表实现，其头结点有两个指针，用于指向列表的第一个和最后一PCB块；每个PCB还包含一个指向就绪队列的下一个PCB的指针。
 **设备队列**：等待特定的I/O设备的进程列表。
 **长期调度程序**（作业调度程序）从缓冲池中选择进程，加到内存以便执行。短期调度程序（CPU调度程序）从准备执行的进程中选择进程，并分配CPU。
- <img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/scheduling.png" alt="进程调度队列图" width=450  align=center > 
+ <img  src="../images/scheduling.png" alt="进程调度队列图" width=450  align=center > 
 
 **中期调度程序**可将进程从内存中移出，从而降低多道程序度。之后程序可被重新调入内存，并从中断处继续执行。
 进程可分为：I/O密集型进程和CPU密集型进程。
@@ -76,7 +76,7 @@ categories: 课程学习
 UNIX通过系统调用**fork()**创建的新进程的地址空间复制原来进程的地址空间。这种机制允许父进程与子进程轻松通信。
 两个进程都继续执行系统调用fork()之后的命令。通常在系统调用fork()之后，有个进程调用**exec（）**，以用新程序来取代进程的内存空间。这两个进程能互相通信。
 
- <img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/fork.jpg" alt="fork命令" width=600  align=center >
+ <img  src="../images/fork.jpg" alt="fork命令" width=600  align=center >
  
 Windows进程创建采用Windows API函数**CreateProcess（）**，类似于fork（），CreateProcess（）在进程创建时要求讲一个特定的程序加载到子进程的地址空间。
 进程终止：当进程完成执行最后语句并且通过系统调用exit()请求操作系统删除自身时，进程终止。进程返回状态值到父进程（通过系统调用exit（））；所有进程资源，如物理和虚拟内存、打开文件和I/O缓存区等，会由操作系统释放。
@@ -129,7 +129,7 @@ Mach的大多数通信，包括所有进程间通信，都是通过消息实现�
 Windows消息传递工具称为高级本地程序调用（ALPC）工具；它用于同一机器的两进程之间通信。类似于标准的远程程序调用（RPC）。
 Windows采用端口对象，以便建立和维护两进程间的连接。
 有两种类型的端口：连接端口和通信端口。
- <img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/alpc.jpg" alt="高级本地程序调用ALPC" width=450  align=center > 
+ <img  src="../images/alpc.jpg" alt="高级本地程序调用ALPC" width=450  align=center > 
 ***
 ## 客户机/服务器通信
 **套接字**

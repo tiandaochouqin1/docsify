@@ -20,7 +20,7 @@ CPU不可直接读取次级存储装置。
 
 **物理结构**
 **磁盘或硬盘：**刺头附着在磁臂上，磁臂将所有磁头作为一个整体而移动。盘片表面逻辑地划分为圆形磁道，再细分为扇区。同一磁臂位置的磁道集合形成了柱面。
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/harddisk.jpg" alt="磁盘的物理结构" width=400  align=center >
+<img  src="../images/harddisk.jpg" alt="磁盘的物理结构" width=400  align=center >
 RPM：每分钟转速。
 定位时间或随机访问时间：包括寻道时间（移动磁臂到所需柱面的所需时间）和旋转延迟（旋转磁臂到所需扇区的所需时间）。
 磁盘驱动器通过I/O总线链接到计算机。
@@ -59,7 +59,7 @@ SSTF和LOOK是默认算法的合理选择。
 自举程序bootstrap：位于只读存储器ROM。初始化系统的所有部分，从CPU寄存器到设备控制器和内存，接着启动操作系统。
 启动磁盘或系统磁盘：具有启动分区的磁盘。
 以Windows为例：引导首先运行驻留在系统ROM内存中的代码，此代码指示系统从MBR中读取引导代码，当系统找到引导分区，它读取分区的第一个扇区，称为引导扇区，并继续加载各种子系统和系统服务。
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/boot.jpg" alt="Windows的磁盘引导" width=300  align=center >
+<img  src="../images/boot.jpg" alt="Windows的磁盘引导" width=300  align=center >
 
 **坏块**：扇区备用、扇区转寄、扇区滑动。
 ***
@@ -75,7 +75,7 @@ SSTF和LOOK是默认算法的合理选择。
 位级分条：将每个字节分散在多个磁盘上。
 块及分条：文件的块分散在多个磁盘上。
 
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/raid.jpg" alt="RAID的级别" width=300  align=center >
+<img  src="../images/raid.jpg" alt="RAID的级别" width=300  align=center >
 
 [基本RAID级别介绍](https://zh.wikipedia.org/wiki/RAID)
 

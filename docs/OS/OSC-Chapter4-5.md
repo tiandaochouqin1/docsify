@@ -17,7 +17,7 @@ categories: 课程学习
 <!-- /TOC -->
 # 多线程编程
 **线程：**是CPU使用的一个基本单元。包括线程ID、程序计数器、寄存器组和堆栈。它与同一进程的其他线程共享代码段、数据段、和其他操作系统资源。
- <img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/process.jpg" alt="单线程与多线程比较" width=500  align=center >
+ <img  src="../images/process.jpg" alt="单线程与多线程比较" width=500  align=center >
  ***
 多线程编程优点：
 * 响应性：部分阻塞或执行冗长操作是，仍可以继续执行；
@@ -27,7 +27,7 @@ categories: 课程学习
 * 
 并行性：并行系统可以同时执行多个任务。多核系统。
 并发性：并发系统支持多个任务，允许所有任务都取得进展。单核系统。
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/parallelism.png" alt="并行性与并发性" width=450  align=center >
+<img  src="../images/parallelism.png" alt="并行性与并发性" width=450  align=center >
 
 **多核编程**：
 挑战：识别任务、平衡、数据分割、数据依赖、测试与调试、
@@ -64,7 +64,7 @@ Java线程API允许线程在Java程序中直接创建和管理，通常采用宿
 * ETHREAD：执行线程块
 * KTHREAD：内核线程块
 * TEB：线程环境块
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/threaddata.jpg" alt="Windows线程数据结构" width=400  align=center >
+<img  src="../images/threaddata.jpg" alt="Windows线程数据结构" width=400  align=center >
 ***
 
 # 进程调度
@@ -109,7 +109,7 @@ CPU密集型程序：少量长的CPU执行。
 时间延迟：从事件发生到事件得到服务大的这段时间。
 中断延迟：从CPU收到中断到中断处理程序开始的时间。要求中断禁用的时间非常短。
 调度延迟：调度程序从停止一个进程到启动另一个进程所需的时间量。提供抢占式内核以降低调度延迟。
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/realtime.jpg" alt="调度延迟" width=400  align=center >
+<img  src="../images/realtime.jpg" alt="调度延迟" width=400  align=center >
 **单调速率调度**算法采用抢占的、静态优先的策略，调度周期性任务。优先级与其周期成反比。可以认为是最优的，如果一组进程不能由此算法调度，它不能由任何其他分配静态优先级的算法来调度。不能保证满足截止期限。
 **最早截止期限优先调度**EDF：根据截止期限动态分配优先级。截止期限最早，优先级最高。理论上最佳，他可以调度进程，使得每个进程都可以满足截止期限的要求并且将CPU的利用率会是100%。EDF调度不要求周期性进程，要求进程在变成可运行时，应宣布它的截止期限。
 

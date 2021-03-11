@@ -42,7 +42,7 @@ CPU内置寄存器可以再一个CPU时钟周期内完成访问。完成内存�
 
 **内存保护：**重定位寄存器含有最小的物理地址值；界限寄存器含有逻辑地址的范围值。
 
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/hardware.jpg" alt="重定位和界限寄存器" width=400  align=center >
+<img  src="../images/hardware.jpg" alt="重定位和界限寄存器" width=400  align=center >
 
 
 **动态存储分配**：首次适应； 最优适应； 最差适应。
@@ -60,7 +60,7 @@ CPU内置寄存器可以再一个CPU时钟周期内完成访问。完成内存�
 分页本身是一种动态地重定位。每个逻辑地址由分页硬件绑定为某个物理地址。
 采用分页的方案不会产生外部碎片：每个空闲帧都可以分配给需要它的进程。
 **转换表缓冲区TLB**：专用的、小的、查找快速的高速硬件缓冲。TLB是关联的高速内存。只包含少数的页表条目。
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/tlb.jpg" alt="带TLB的分页硬件" width=500  align=center >
+<img  src="../images/tlb.jpg" alt="带TLB的分页硬件" width=500  align=center >
 分页环境下的内存保护是通过与每个帧关联的保护位来实现的。
 共享页：可重入代码，即不能自我修改的代码，在执行期间不会改变。
 ***

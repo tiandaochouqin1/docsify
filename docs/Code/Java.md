@@ -77,15 +77,15 @@ Class cls = Class.forName("java.lang.String");
 
 
 # JVM内存结构
-<img src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/JVM.png" width = "800"  alt="JVM" align=center />
+<img src="../images/JVM.png" width = "800"  alt="JVM" align=center />
 
 
-![Jvm内存](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/JvmMem.jpg)
+![Jvm内存](../images/JvmMem.jpg)
 
 # 线程池
 
 ThreadPoolExecutor
-![ThreadPoolExecutor](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/ThreadPoolExecutor.png)
+![ThreadPoolExecutor](../images/ThreadPoolExecutor.png)
 [Java线程池实现原理及其在美团业务中的实践](https://tech.meituan.com/2020/04/02/java-pooling-pratice-in-meituan.html)
 
 

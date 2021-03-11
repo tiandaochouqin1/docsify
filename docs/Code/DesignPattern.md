@@ -101,7 +101,7 @@ UML图（包括用例图、协作图、活动图、序列图、部署图、构�
 类的继承结构表现在UML中为：泛化(generalize)与实现(realize，继承抽象类)。
 依赖关系：与关联关系不同的是，它是一种临时性的关系，通常在运行期间产生，并且随着运行时的变化； 依赖关系也可能发生变化
 聚合关系：与组合关系不同的是，整体和部分不是强依赖的，即使整体不存在了，部分仍然存在。
-![UML关系](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/UMLRelations.jpg)
+![UML关系](../images/UMLRelations.jpg)
 
 https://juejin.im/post/6844903893327937550
 
@@ -133,7 +133,7 @@ sd | 序列图：用于包围整个序列图
 简单工厂模式包含三个角色：工厂角色负责实现创建所有实例的内部逻辑；抽象产品角色是所创建的所有对象的父类，负责描述所有实例所共有的公共接口；具体产品角色是创建目标，所有创建的对象都充当这个角色的某个具体类的实例。
 **优点**在于实现对象的创建和对象的使用分离，将对象的创建交给专门的工厂类负责。
 **缺点**在于工厂类不够灵活，增加新的具体产品需要修改工厂类的判断逻辑代码，而且产品较多时，工厂方法代码将会非常复杂。
-![SimpleFactory](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/SimpleFactory.jpg)
+![SimpleFactory](../images/SimpleFactory.jpg)
 
 ## 工厂方法模式(Factory Method Pattern)
 工厂方法模式包含如下角色：
@@ -141,8 +141,8 @@ sd | 序列图：用于包围整个序列图
 - ConcreteProduct：具体产品
 - Factory：抽象工厂
 - ConcreteFactory：具体工厂
-![FactoryMethod](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/FactoryMethod.jpg)
-![seq_FactoryMethod](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/seq_FactoryMethod.jpg)
+![FactoryMethod](../images/FactoryMethod.jpg)
+![seq_FactoryMethod](../images/seq_FactoryMethod.jpg)
 
 ### 代码分析
 ```
@@ -190,8 +190,8 @@ int main(int argc, char *argv[])
 
 抽象工厂模式与工厂方法模式最大的区别在于，工厂方法模式针对的是一个产品等级结构，而抽象工厂模式则需要面对多个产品等级结构，一个工厂等级结构可以负责多个不同产品等级结构中的产品对象的创建 。
 
-![AbatractFactory](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/AbatractFactory.jpg)
-![seq_AbatractFactory](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/seq_AbatractFactory.jpg)
+![AbatractFactory](../images/AbatractFactory.jpg)
+![seq_AbatractFactory](../images/seq_AbatractFactory.jpg)
 
 ### 代码分析
 ```
@@ -266,8 +266,8 @@ void ProductA1::use(){
 - Product：产品角色
 指挥者类Director：一方面它隔离了客户与生产过程；另一方面它负责控制产品的生成过程。
 
-![BuilderPattern](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/BuilderPattern.jpg)
-![seq_BuilderPattern](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/seq_BuilderPattern.jpg)
+![BuilderPattern](../images/BuilderPattern.jpg)
+![seq_BuilderPattern](../images/seq_BuilderPattern.jpg)
 
 ## 单例模式(Singleton Pattern)
 单例模式确保某一个类只有一个实例，而且自行实例化并向整个系统提供这个实例，这个类称为单例类，它提供全局访问的方法。
@@ -276,8 +276,8 @@ void ProductA1::use(){
 2. 提供一个自身的静态私有成员变量；
 3. 提供一个公有的静态工厂方法。
    
-![Singleton](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/Singleton.jpg)
-![seq_Singleton](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/seq_Singleton.jpg)
+![Singleton](../images/Singleton.jpg)
+![seq_Singleton](../images/seq_Singleton.jpg)
 
 # 结构型模式
 结构型模式描述如何将类或者对象结合在一起形成更大的结构。
@@ -293,11 +293,11 @@ void ProductA1::use(){
 1. 系统需要使用现有的类，而这些类的接口不符合系统的需要；
 2. 想要建立一个可以重复使用的类，用于与一些彼此之间没有太大关联的一些类一起工作。
 
-![Adapter](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/Adapter.jpg)
+![Adapter](../images/Adapter.jpg)
 
-![Adapter_classModel](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/Adapter_classModel.jpg)
+![Adapter_classModel](../images/Adapter_classModel.jpg)
 
-![seq_Adapter](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/seq_Adapter.jpg)
+![seq_Adapter](../images/seq_Adapter.jpg)
 
 **代码分析**
 ```
@@ -331,8 +331,8 @@ int main(int argc, char *argv[])
 - Implementor：实现类接口,定义了实现类的接口，实现类接口仅提供基本操作，而抽象类定义的接口可能会做更多更复杂的操作；
 - ConcreteImplementor：具体实现类,实现了实现类接口并且具体实现它，在不同的具体实现类中提供基本操作的不同实现，在程序运行时，具体实现类对象将替换其父类对象，提供给客户端具体的业务操作方法。
 
-![BridgePattern](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/BridgePattern.jpg)
-![seq_BridgePattern](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/seq_BridgePattern.jpg)
+![BridgePattern](../images/BridgePattern.jpg)
+![seq_BridgePattern](../images/seq_BridgePattern.jpg)
 
 **代码分析**
 ```
@@ -369,8 +369,8 @@ ConcreteComponent:具体构件定义了具体的构件对象，实现了 在抽�
 Decorator:抽象装饰类是抽象构件类的子类，用于给具体构件增加职责，但是具 体职责在其子类中实现；
 ConcreteDecorator:具体装饰类是抽象装饰类的子类，负责向构 件添加新的职责。
 
-![DecoratorPattern](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/DecoratorPattern.jpg)
-![seq_DecoratorPatern](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/seq_DecoratorPatern.jpg)
+![DecoratorPattern](../images/DecoratorPattern.jpg)
+![seq_DecoratorPatern](../images/seq_DecoratorPatern.jpg)
 
 ## 外观模式(Facade Pattern)
 外部与一个子系统的通信必须通过一个统一的外观对象进行，为子系统中的一组接口提供一个一致的界面，外观模式定义了一个高层接口，这个接口使得这一子系统更加容易使用。外观模式又称为门面模式，它是一种对象结构型模式。
@@ -380,8 +380,8 @@ ConcreteDecorator:具体装饰类是抽象装饰类的子类，负责向构 件�
 - Facade: 外观角色
 - SubSystem:子系统角色
 
-![FacadePattern](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/FacadePattern.jpg)
-![seq_FacadePattern](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/seq_FacadePattern.jpg)
+![FacadePattern](../images/FacadePattern.jpg)
+![seq_FacadePattern](../images/seq_FacadePattern.jpg)
 
 ## 享元模式(Flyweight Pattern)
 运用共享技术有效地支持大量细粒度对象的复用。系统只使用少量的对象，而这些对象都很相似，状态变化很小，可以实现对象的多次复用。由于享元模式要求能够共享的对象必须是细粒度对象，因此它又称为轻量级模式，它是一种对象结构型模式。
@@ -392,8 +392,8 @@ ConcreteDecorator:具体装饰类是抽象装饰类的子类，负责向构 件�
 - ConcreteFlyweight: 具体享元类,实现了抽象享元接口，其实例称为享元对象；
 - UnsharedConcreteFlyweight: 非共享具体享元类,不能被共享的抽象享元类的子类；
 - FlyweightFactory: 享元工厂类,用于创建并管理享元对象，它针对抽象享元类编程，将各种类型的具体享元对象存储在一个享元池中。
-![FlyweightPattern](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/FlyweightPattern.jpg)
-![seq_FlyweightPattern](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/seq_FlyweightPattern.jpg)
+![FlyweightPattern](../images/FlyweightPattern.jpg)
+![seq_FlyweightPattern](../images/seq_FlyweightPattern.jpg)
 
 
 ## 代理模式(Proxy Pattern) 
@@ -403,8 +403,8 @@ ConcreteDecorator:具体装饰类是抽象装饰类的子类，负责向构 件�
 - Subject: 抽象主题角色,声明了真实主题和代理主题的共同接口；
 - Proxy: 代理主题角色,包含对真实主题的引用，从而可以在任何时候操作真实主题对象;
 - RealSubject: 真实主题角色,定义了代理角色所代表的真实对象，在真实主题角色中实现了真实的业务操作，客户端可以通过代理主题角色间接调用真实主题角色中定义的方法
-![ProxyPattern](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/ProxyPattern.jpg)
-![seq_ProxyPattern](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/seq_ProxyPattern.jpg)
+![ProxyPattern](../images/ProxyPattern.jpg)
+![seq_ProxyPattern](../images/seq_ProxyPattern.jpg)
 
 
 # 行为型模式
@@ -417,8 +417,8 @@ ConcreteDecorator:具体装饰类是抽象装饰类的子类，负责向构 件�
 
 观察者模式是一种对象行为型模式。
 
-![ObeserverPattern](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/ObeserverPattern.jpg)
-![seq_ObeserverPattern](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/seq_ObeserverPattern.jpg)
+![ObeserverPattern](../images/ObeserverPattern.jpg)
+![seq_ObeserverPattern](../images/seq_ObeserverPattern.jpg)
 
 ## 策略模式(Strategy Pattern)
 定义一系列算法，将每一个算法封装起来，并让它们可以相互替换。策略模式让算法独立于使用它的客户而变化，也称为政策模式(Policy)。
@@ -427,8 +427,8 @@ ConcreteDecorator:具体装饰类是抽象装饰类的子类，负责向构 件�
 - Strategy:抽象策略类为所支持的算法声明了抽象方法，是所有策略类的父类；
 - ConcreteSrategy:具体策略类实现了在抽象策略类中定义的算法。
 
-![StrategyPattern](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/StrategyPattern.jpg)
-![seq_StrategyPattern](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/seq_StrategyPattern.jpg)
+![StrategyPattern](../images/StrategyPattern.jpg)
+![seq_StrategyPattern](../images/seq_StrategyPattern.jpg)
 
 ## 命令模式(Command Pattern)
 将一个请求封装为一个对象，从而使我们可用不同的请求对客户进行参数化；对请求排队或者记录请求日志，以及支持可撤销的操作。命令模式是一种对象行为型模式，其别名为动作(Action)模式或事务(Transaction)模式。
@@ -439,16 +439,16 @@ ConcreteDecorator:具体装饰类是抽象装饰类的子类，负责向构 件�
 - Receiver: 接收者
 - Client:客户类
 
-![CommandPattern](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/CommandPattern.jpg)
-![seq_CommandPattern](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/seq_CommandPattern.jpg)
+![CommandPattern](../images/CommandPattern.jpg)
+![seq_CommandPattern](../images/seq_CommandPattern.jpg)
 
 ## 状态模式(State Pattern) 
 允许一个对象在其内部状态改变时改变它的行为，对象看起来似乎修改了它的类。其别名为状态对象(Objects for States)，状态模式是一种对象行为型模式。
 - 环境类又称为上下文类，它是拥有状态的对象，在环境类中维护一个抽象状态类State的实例，这个实例定义当前状态，在具体实现时，它是一个State子类的对象，可以定义初始状态；
 - 抽象状态类用于定义一个接口以封装与环境类的一个特定状态相关的行为；
 - 具体状态类是抽象状态类的子类，每一个子类实现一个与环境类的一个状态相关的行为，每一个具体状态类对应环境的一个具体状态，不同的具体状态类其行为有所不同。
-![StatePattern](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/StatePattern.jpg)
-![seq_StatePattern](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/seq_StatePattern.jpg)
+![StatePattern](../images/StatePattern.jpg)
+![seq_StatePattern](../images/seq_StatePattern.jpg)
 
 ---
 >20210310更新，基于《设计模式之美-极客时间》
@@ -463,7 +463,7 @@ ConcreteDecorator:具体装饰类是抽象装饰类的子类，负责向构 件�
 - 编程规范：解决代码可读性问题。偏重代码细节的、具体的、可落地的一些编码建议。是持续小重构的理论基础。
 - 重构：保持代码质量不下降。综合利用以上的理论。
 
-![DesignPatternTheory](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/DesignPatternTheory.jpg)
+![DesignPatternTheory](../images/DesignPatternTheory.png)
 
 ## 面向对象
 面向对象编程语言：以类或对象作为组织代码的基本单元，以封装、继承与多态作为代码设计和实现的基石。

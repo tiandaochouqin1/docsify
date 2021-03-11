@@ -70,14 +70,14 @@ categories: 课程学习
 
 OSI参考模型
 
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/OSI-7.jpg" alt="OSI模型" width=600  height=800  align=center >  
+<img  src="../images/OSI-7.jpg" alt="OSI模型" width=600  height=800  align=center >  
 
 
 ***
 
 TCP/IP 五层模型
 
-<img src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/osi-5.png" width=400 height=500  align=center>
+<img src="../images/osi-5.png" width=400 height=500  align=center>
 
 ## OSI模型
 
@@ -120,11 +120,11 @@ PDU（协议数据单元）：bit
 ***
 
   每一层有不同的设备工作，比如交换机——数据链路层、路由器——网络层。
-  <img src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/devices.png" alt=各层工作的设备 width=800 height=500 align=center>
+  <img src="../images/devices.png" alt=各层工作的设备 width=800 height=500 align=center>
   
 ***  
   每一层分别实现不同的协议。
-  <img src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/protocol.png" alt=各层实现的协议 width=800 align=center>
+  <img src="../images/protocol.png" alt=各层实现的协议 width=800 align=center>
 
 ***
 
@@ -151,7 +151,7 @@ Wireshark实验：捕获并检查Web浏览器和Web服务器之间交换的协�
 **因特网提供的运输服务：**
   TCP服务：包括面向连接服务和可靠数据传输服务。
   UDP服务：不提供不必要服务的轻量级运输协议，仅提供最小服务。无连接，不可靠数据传输。
-<img src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/appandprotocoal.png" alt=流行的应用及其应用层协议及支撑的运输协议 height=400 width=600 align=center>
+<img src="../images/appandprotocoal.png" alt=流行的应用及其应用层协议及支撑的运输协议 height=400 width=600 align=center>
 
 **应用层协议**定义了：
 - 交换报文的类型
@@ -172,14 +172,14 @@ Web的应用层协议。
 
 **HTTP报文的格式**
 [参考文章](https://www.cnblogs.com/jiu0821/p/5641600.html)
-<img src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/requestpost.png" alt=请求报文 height=400 width=600 align=center>
+<img src="../images/requestpost.png" alt=请求报文 height=400 width=600 align=center>
 请求报文:
 - 请求行：方法、URL、HTTP版本
 - 首部行
 - 实体体
 
 ***
-<img src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/replypost.png" alt=响应报文 height=400 width=600 align=center>
+<img src="../images/replypost.png" alt=响应报文 height=400 width=600 align=center>
 响应报文:
 - 状态行：版本、状态码、相应状态信息。
 - 首部行
@@ -221,7 +221,7 @@ DNS是：
   1. 分布式、层次数据库;递归查询和迭代查询
   2. DNS缓存：改善时延性能、减少在因特网上传输的DNS报文数量。
   3. DNS记录和报文
-<img src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/DNS.png" alt=DNS报文 height=500 width=900 align=center>
+<img src="../images/DNS.png" alt=DNS报文 height=500 width=900 align=center>
 
 ## 文件分发
 P2P
@@ -262,7 +262,7 @@ UDP的优点（相对于TCP）：
  3. 无连接状态。TCP需在端系统中维护连接状态，
  4. 分组首部开销小。TCP-20字节，UDP-8字节。
 **UDP报文段结构**
-<img src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/udp.png" alt=UDP报文段 height=300 width=600 align=center>
+<img src="../images/udp.png" alt=UDP报文段 height=300 width=600 align=center>
 
 **UDP检验和**
 提供差错检测功能。
@@ -271,14 +271,14 @@ UDP的优点（相对于TCP）：
 ## 可靠数据传输原理
 **1 构建可靠的数据传输协议**
 有限状态机、停等协议
-<img src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/rdt3-sender.png" alt=rdt3.0 height=400 width=500 align=center>
+<img src="../images/rdt3-sender.png" alt=rdt3.0 height=400 width=500 align=center>
 **2 流水线可靠数据传输协议**
 流水线差错恢复：回退N步（GBN）和选择重传（SR）。
 
 ## 面向连接的运输
 TCP 在不可靠的（IP)端到端网络层之上实现可靠的数据传输协议。
 **TCP报文段结构**
-<img src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/tcp.jpg" alt=TCP报文段 height=400 width=600 align=center>
+<img src="../images/tcp.jpg" alt=TCP报文段 height=400 width=600 align=center>
 
 **往返时间的估计与超时**
 超时间隔加倍、快速重传。
@@ -316,7 +316,7 @@ UDP源可能压制TCP流量。
 
 ## 路由器工作原理
 
-<img src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/router.png" alt=路由器体系结构 height=400 width=600 align=center>
+<img src="../images/router.png" alt=路由器体系结构 height=400 width=600 align=center>
 
 1. 输入端口
 基于目的地的转发。
@@ -333,7 +333,7 @@ UDP源可能压制TCP流量。
 
 ## 网际协议
 **IPv4数据报格式**
-<img src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/IPv4.png" alt=IPv4数据报格式 height=400 width=600 align=center>
+<img src="../images/IPv4.png" alt=IPv4数据报格式 height=400 width=600 align=center>
 **IPv4数据报分片**
 链路层协议的MTU严格限制IP数据报的长度。
 一个链路层能承载的最大数据量叫做最大传送单元ＭＴＵ。
@@ -346,7 +346,7 @@ UDP源可能压制TCP流量。
 使用NAT路由器上的一张NAT转换表。
 
 **IPv6**
-<img src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/IPv6.png" alt=IPv6数据报格式 height=300 width=400 align=center>
+<img src="../images/IPv6.png" alt=IPv6数据报格式 height=300 width=400 align=center>
 无 分片/组装、首部检验和、选项
 
 ## 通用转发
@@ -385,7 +385,7 @@ OSPF：开放最短路优先。是一种链路状态协议，他使用洪泛链�
  2. 数据平面与控制平面分离
  3. 网络控制功能：位于数据平面交换机外部
  4. 可编程的网络
-<img src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/SDN.png" alt=SDN height=400 width=400 align=center>
+<img src="../images/SDN.png" alt=SDN height=400 width=400 align=center>
 
 ## 因特网控制报文协议
 ICMP通常被认为是IP的一部分，但是从体系结构上来讲，它位于IP之上。因为ICMP报文是作为IP有效载荷承载的。
@@ -429,7 +429,7 @@ ARP：地址解析协议，网络层地址和链路层地址之间的转换。AR
 
 **以太网**
 以太网帧结构
- <img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/Ethernet.png" alt=以太网帧结构 width=700   align=center >
+ <img  src="../images/Ethernet.png" alt=以太网帧结构 width=700   align=center >
 以太网技术向网络层提供无连接、不可靠服务。
 **交换机**
 流量隔离：路由器、交换机
@@ -439,12 +439,12 @@ ARP：地址解析协议，网络层地址和链路层地址之间的转换。AR
 ## 链路虚拟化
 多协议标签交换（MPLS）:一种在开放的通信网上利用标签引导数据高速、高效传输的新技术。多协议的含义是指MPLS不但可以支持多种网络层层面上的协议，还可以兼容第二层的多种数据链路层技术。
 
- <img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/MPLS.jpg" alt=MPLS width=500   align=center >
+ <img  src="../images/MPLS.jpg" alt=MPLS width=500   align=center >
 
 基于标签执行交换、流量管理能力、执行MPLS转发路径的快速恢复、虚拟专用网（VPN）
 
 ## 数据中心网络
- <img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/DataCenter.png" alt=数据中心网络 width=600    align=center >
+ <img  src="../images/DataCenter.png" alt=数据中心网络 width=600    align=center >
 
 ## 回顾-页面请求的历程
 待补充

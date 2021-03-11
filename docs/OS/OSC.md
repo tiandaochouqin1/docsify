@@ -41,7 +41,7 @@ categories: 课程学习
 事件的发生通常通过硬件或软件的中断来通知。硬件通过系统总线发送信号到CPU，以触发中断；软件通过系统调用（也称为监督程序调用）以触发中断。
 CPU只能从内存中加载指令，因此执行程序必须位于内存中。通用计算机运行的大多数程序位于可读内存，一般为**动态随机访问内存（DRAM）**。
 
- <img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/StorageDevices.jpg" alt="存储设备结构" width=350   align=center >  
+ <img  src="../images/StorageDevices.jpg" alt="存储设备结构" width=350   align=center >  
   
 操作系统的大部分代码用于I/O管理。**设备驱动程序**负责设备控制器，并为操作系统的其他部分提供统一的设备访问接口。
 
@@ -81,7 +81,7 @@ I/O子系统包括了以下几个组件：
 
 # 操作系统结构
  
- <img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/SysSevice.jpg" alt="操作系统服务" width=500   align=center > 
+ <img  src="../images/SysSevice.jpg" alt="操作系统服务" width=500   align=center > 
 用户界面：图形用户界面、命令行和批处理；
 程序执行；I/O操作；文件系统操作；通信；错误检测；资源分配；记账；保护和安全。
 
@@ -107,7 +107,7 @@ I/O子系统包括了以下几个组件：
 
 ## 进程的概念
 进程不只是程序代码，程序代码有时称为文本段。进程还包括当前活动，如程序计数器的值和处理器寄存器的内容等。进程还包括：进程堆栈和数据段，还可能包括堆。**进程的内存结构**如图所示：
- <img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/processinmemory.png" alt="进程的内存结构" width=200   align=center > 
+ <img  src="../images/processinmemory.png" alt="进程的内存结构" width=200   align=center > 
 * 文本：程序代码。
 * 堆栈：临时数据，如如函数参数、返回地址和局部变量。
 * 数据段：包括全局变量。
@@ -123,7 +123,7 @@ I/O子系统包括了以下几个组件：
 * I/O状态信息：包括分配给进程的I/O设备列表和打开文件列表。
 在支持线程的系统中，PCB被扩展到每个线程的信息。
 
- <img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/cpuswitch.png" alt="进程调度队列" width=600  align=center > 
+ <img  src="../images/cpuswitch.png" alt="进程调度队列" width=600  align=center > 
 
 
 ## 进程调度
@@ -136,7 +136,7 @@ I/O子系统包括了以下几个组件：
 **就绪队列**：驻留在内存中的、就绪的、等待运行的进程。通常用链表实现，其头结点有两个指针，用于指向列表的第一个和最后一PCB块；每个PCB还包含一个指向就绪队列的下一个PCB的指针。
 **设备队列**：等待特定的I/O设备的进程列表。
 **长期调度程序**（作业调度程序）从缓冲池中选择进程，加到内存以便执行。短期调度程序（CPU调度程序）从准备执行的进程中选择进程，并分配CPU。
- <img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/scheduling.png" alt="进程调度队列图" width=450  align=center > 
+ <img  src="../images/scheduling.png" alt="进程调度队列图" width=450  align=center > 
 
 **中期调度程序**可将进程从内存中移出，从而降低多道程序度。之后程序可被重新调入内存，并从中断处继续执行。
 进程可分为：I/O密集型进程和CPU密集型进程。
@@ -158,7 +158,7 @@ I/O子系统包括了以下几个组件：
 UNIX通过系统调用**fork()**创建的新进程的地址空间复制原来进程的地址空间。这种机制允许父进程与子进程轻松通信。
 两个进程都继续执行系统调用fork()之后的命令。通常在系统调用fork()之后，有个进程调用**exec（）**，以用新程序来取代进程的内存空间。这两个进程能互相通信。
 
- <img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/fork.jpg" alt="fork命令" width=600  align=center >
+ <img  src="../images/fork.jpg" alt="fork命令" width=600  align=center >
  
 Windows进程创建采用Windows API函数**CreateProcess（）**，类似于fork（），CreateProcess（）在进程创建时要求讲一个特定的程序加载到子进程的地址空间。
 进程终止：当进程完成执行最后语句并且通过系统调用exit()请求操作系统删除自身时，进程终止。进程返回状态值到父进程（通过系统调用exit（））；所有进程资源，如物理和虚拟内存、打开文件和I/O缓存区等，会由操作系统释放。
@@ -211,7 +211,7 @@ Mach的大多数通信，包括所有进程间通信，都是通过消息实现�
 Windows消息传递工具称为高级本地程序调用（ALPC）工具；它用于同一机器的两进程之间通信。类似于标准的远程程序调用（RPC）。
 Windows采用端口对象，以便建立和维护两进程间的连接。
 有两种类型的端口：连接端口和通信端口。
- <img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/alpc.jpg" alt="高级本地程序调用ALPC" width=450  align=center > 
+ <img  src="../images/alpc.jpg" alt="高级本地程序调用ALPC" width=450  align=center > 
 ***
 ## 客户机/服务器通信
 **套接字**
@@ -228,7 +228,7 @@ RPC交换的数据消息具有明确结构。消息传到RPC服务，RPC服务�
 
 # 多线程编程
 **线程：**是CPU使用的一个基本单元。包括线程ID、程序计数器、寄存器组和堆栈。它与同一进程的其他线程共享代码段、数据段、和其他操作系统资源。
- <img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/process.jpg" alt="单线程与多线程比较" width=500  align=center >
+ <img  src="../images/process.jpg" alt="单线程与多线程比较" width=500  align=center >
  ***
 多线程编程优点：
 * 响应性：部分阻塞或执行冗长操作是，仍可以继续执行；
@@ -238,7 +238,7 @@ RPC交换的数据消息具有明确结构。消息传到RPC服务，RPC服务�
 * 
 并行性：并行系统可以同时执行多个任务。多核系统。
 并发性：并发系统支持多个任务，允许所有任务都取得进展。单核系统。
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/parallelism.png" alt="并行性与并发性" width=450  align=center >
+<img  src="../images/parallelism.png" alt="并行性与并发性" width=450  align=center >
 
 **多核编程**：
 挑战：识别任务、平衡、数据分割、数据依赖、测试与调试、
@@ -275,7 +275,7 @@ Java线程API允许线程在Java程序中直接创建和管理，通常采用宿
 * ETHREAD：执行线程块
 * KTHREAD：内核线程块
 * TEB：线程环境块
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/threaddata.jpg" alt="Windows线程数据结构" width=400  align=center >
+<img  src="../images/threaddata.jpg" alt="Windows线程数据结构" width=400  align=center >
 ***
 
 # 进程调度
@@ -320,7 +320,7 @@ CPU密集型程序：少量长的CPU执行。
 时间延迟：从事件发生到事件得到服务大的这段时间。
 中断延迟：从CPU收到中断到中断处理程序开始的时间。要求中断禁用的时间非常短。
 调度延迟：调度程序从停止一个进程到启动另一个进程所需的时间量。提供抢占式内核以降低调度延迟。
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/realtime.jpg" alt="调度延迟" width=400  align=center >
+<img  src="../images/realtime.jpg" alt="调度延迟" width=400  align=center >
 **单调速率调度**算法采用抢占的、静态优先的策略，调度周期性任务。优先级与其周期成反比。可以认为是最优的，如果一组进程不能由此算法调度，它不能由任何其他分配静态优先级的算法来调度。不能保证满足截止期限。
 **最早截止期限优先调度**EDF：根据截止期限动态分配优先级。截止期限最早，优先级最高。理论上最佳，他可以调度进程，使得每个进程都可以满足截止期限的要求并且将CPU的利用率会是100%。EDF调度不要求周期性进程，要求进程在变成可运行时，应宣布它的截止期限。
 
@@ -335,7 +335,7 @@ CPU密集型程序：少量长的CPU执行。
 # 同步
 竞争条件：多个进程并发访问和操作同一数据，并且执行结果与特定访问顺序有关。
 每个进程有一段代码，称为**临界区**，进程在执行该区时可能修改公共变量、更新一个表、写一个文件等。当一个系统在临界区内执行时，其他进程不允许在他们的临界区内执行。
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/critical.jpg" alt="" width=300  align=center >
+<img  src="../images/critical.jpg" alt="" width=300  align=center >
 
 临界区问题的解决方案应满足如下三条要求：**互斥、进步、有限等待。**
 ***
@@ -496,7 +496,7 @@ CPU内置寄存器可以再一个CPU时钟周期内完成访问。完成内存�
 
 **内存保护：**重定位寄存器含有最小的物理地址值；界限寄存器含有逻辑地址的范围值。
 
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/hardware.jpg" alt="重定位和界限寄存器" width=400  align=center >
+<img  src="../images/hardware.jpg" alt="重定位和界限寄存器" width=400  align=center >
 
 
 **动态存储分配**：首次适应； 最优适应； 最差适应。
@@ -514,7 +514,7 @@ CPU内置寄存器可以再一个CPU时钟周期内完成访问。完成内存�
 分页本身是一种动态地重定位。每个逻辑地址由分页硬件绑定为某个物理地址。
 采用分页的方案不会产生外部碎片：每个空闲帧都可以分配给需要它的进程。
 **转换表缓冲区TLB**：专用的、小的、查找快速的高速硬件缓冲。TLB是关联的高速内存。只包含少数的页表条目。
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/tlb.jpg" alt="带TLB的分页硬件" width=500  align=center >
+<img  src="../images/tlb.jpg" alt="带TLB的分页硬件" width=500  align=center >
 分页环境下的内存保护是通过与每个帧关联的保护位来实现的。
 共享页：可重入代码，即不能自我修改的代码，在执行期间不会改变。
 ***
@@ -593,7 +593,7 @@ slab分配器允许从由slab组成的cache上来分配，每个slab由若干物
 
 # 文件系统的实现
 **文件系统结构**
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/filesys.jpg" alt="分层设计的文件系统" width=150  align=center >
+<img  src="../images/filesys.jpg" alt="分层设计的文件系统" width=150  align=center >
 
 **I/O控制层：**包括设备驱动程序和中断处理程序，以在主内存和磁盘系统之间传输消息。
 **基本文件系统：**只需向适当的设备驱动程序发送通用指令，以读取和写入磁盘的物理块。
@@ -618,7 +618,7 @@ slab分配器允许从由slab组成的cache上来分配，每个slab由若干物
 ***
 **虚拟文件系统**
 文件系统的实现由三个主要层组成。如图所示：
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/vfs.jpg" alt="虚拟文件系统示意图" width=300  align=center >
+<img  src="../images/vfs.jpg" alt="虚拟文件系统示意图" width=300  align=center >
 第一层为文件系统接口，基于open()、read()、write()和close()调用即文件描述符。
 第二层为虚拟文件系统层ＶＦＳ。1) 文件系统的通用操作和实现分开。2) 提供一种机制，以唯一表示网络上的文件。
 第三层实现文件系统类型或远程文件系统协议的层。
@@ -637,7 +637,7 @@ slab分配器允许从由slab组成的cache上来分配，每个slab由若干物
 **索引分配**：将所有指针放到一起，即索引块。支持直接访问。UNIX的innode。
 每个文件都有自己的索引块，这是一个磁盘块地址的指针。目录则包含索引块的地址。
 索引表空间和文件索引时间开销大。
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/innode.jpg" alt="Unix的innode" width=400  align=center >
+<img  src="../images/innode.jpg" alt="Unix的innode" width=400  align=center >
 
 ***
 **空闲空间管理**
@@ -671,7 +671,7 @@ CPU不可直接读取次级存储装置。
 
 **物理结构**
 **磁盘或硬盘：**刺头附着在磁臂上，磁臂将所有磁头作为一个整体而移动。盘片表面逻辑地划分为圆形磁道，再细分为扇区。同一磁臂位置的磁道集合形成了柱面。
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/harddisk.jpg" alt="磁盘的物理结构" width=400  align=center >
+<img  src="../images/harddisk.jpg" alt="磁盘的物理结构" width=400  align=center >
 RPM：每分钟转速。
 定位时间或随机访问时间：包括寻道时间（移动磁臂到所需柱面的所需时间）和旋转延迟（旋转磁臂到所需扇区的所需时间）。
 磁盘驱动器通过I/O总线链接到计算机。
@@ -710,7 +710,7 @@ SSTF和LOOK是默认算法的合理选择。
 自举程序bootstrap：位于只读存储器ROM。初始化系统的所有部分，从CPU寄存器到设备控制器和内存，接着启动操作系统。
 启动磁盘或系统磁盘：具有启动分区的磁盘。
 以Windows为例：引导首先运行驻留在系统ROM内存中的代码，此代码指示系统从MBR中读取引导代码，当系统找到引导分区，它读取分区的第一个扇区，称为引导扇区，并继续加载各种子系统和系统服务。
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/boot.jpg" alt="Windows的磁盘引导" width=300  align=center >
+<img  src="../images/boot.jpg" alt="Windows的磁盘引导" width=300  align=center >
 
 **坏块**：扇区备用、扇区转寄、扇区滑动。
 ***
@@ -726,7 +726,7 @@ SSTF和LOOK是默认算法的合理选择。
 位级分条：将每个字节分散在多个磁盘上。
 块及分条：文件的块分散在多个磁盘上。
 
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/raid.jpg" alt="RAID的级别" width=300  align=center >
+<img  src="../images/raid.jpg" alt="RAID的级别" width=300  align=center >
 
 [基本RAID级别介绍](https://zh.wikipedia.org/wiki/RAID)
 
@@ -742,7 +742,7 @@ I/O设备的基本要素：总线、设备控制器和设备本身。
 设备与计算机的通信通过一个连接点或**端口**。如果设备共享一组通用线路，则这种连接为总线。
 **总线：**是一组线路和通过线路传输信息的严格定义的一个协议。消息是通过施加线路的具有一定时序的电压模式来传递的。
 PCI总线将处理器内存子系统连接到快速设备。扩展总线连接相对较慢的设备，如键盘和串口和USB端口。
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/bus.jpg" alt="PC总线结构" width=400  align=center >
+<img  src="../images/bus.jpg" alt="PC总线结构" width=400  align=center >
 SCSI：小型计算机系统接口。
 **控制器：**是可以操作端口、总线或设备的一组电子器件。
 I/O端口通常由四个寄存器组成，即状态、控制、数据输入和数据输出寄存器。
@@ -755,7 +755,7 @@ I/O端口通常由四个寄存器组成，即状态、控制、数据输入和�
 **中断**：能让设备通知CPU的硬件机制称为中断。
 设备控制器通过中断请求线发送信号而引起中断，CPU捕获中断并且分派到中断处理程序，中断处理程序通过处理设备来清除中断。
 中断处理程序确定中断原因，执行必要处理，执行状态恢复，并执行返回终端指令以便CPU回到中断前的执行状态。
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/interrupt.jpg" alt="基本中断处理机制" width=400  align=center >
+<img  src="../images/interrupt.jpg" alt="基本中断处理机制" width=400  align=center >
 非屏蔽中断：保留用于诸如不可恢复的内存错误等事件。
 可屏蔽中断：在执行不得中断的关键指令序列之前，可由CPU关闭。
 中断向量：包含专门的中断处理程序的内存地址。目的是，单个中断处理不在需要搜索所有可能中断源。中断链技术。
@@ -767,16 +767,16 @@ I/O端口通常由四个寄存器组成，即状态、控制、数据输入和�
 **直接内存访问（DMA）：**主机将DMA命令块写到内存，CPU将命令块的地址写到DMA控制器器，DMA控制器直接操作内存总线，将地址放到总线，在没有主CPU的帮助的情况下执行传输。该命令块包含传输来源地址的指针、传输目标地址的指针、传输的字节数。
 DMA控制器和设备控制器之间的握手，通过一对称为DMA请求和DMA确认的线路来进行。
 
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/dma.png" alt="DMA传输的步骤" width=400  align=center >
+<img  src="../images/dma.png" alt="DMA传输的步骤" width=400  align=center >
 
 
 ***
 
 **应用程序I/O接口**
 设备驱动程序层：为内核I/O子系统隐藏设备控制器之间的差异；就如同I/O系统调用封装设备的行为。
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/kernalio.png" alt="内核I/O结构" width=400  align=center >
+<img  src="../images/kernalio.png" alt="内核I/O结构" width=400  align=center >
 
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/iodevices.png" alt="I/O设备的特点" width=400  align=center >
+<img  src="../images/iodevices.png" alt="I/O设备的特点" width=400  align=center >
 
 **块与字符设备**
 块设备接口：为磁盘驱动器和其他基于块设备的访问规定了所需的各方面。基本行为：read()、write()、seek()。
@@ -790,7 +790,7 @@ DMA控制器和设备控制器之间的握手，通过一对称为DMA请求和DM
 可编程间隔定时器：测量经过时间和触发操作的硬件。
 
 **非阻塞与异步I/O**
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/iomethods.png" alt="两种I/O方法" width=400  align=center >
+<img  src="../images/iomethods.png" alt="两种I/O方法" width=400  align=center >
 
 
 **向量I/O**：允许系统调用，来执行涉及多个位置的多个I/O操作。
@@ -812,15 +812,15 @@ DMA控制器和设备控制器之间的握手，通过一对称为DMA请求和DM
 * I/O保护：定义所有I/O指令为特权指令，防止用户执行非法I/O；保护任何内存映射和I/O端口内存位置以便阻止用户访问。
 * 名称转换：在硬件设备和应用程序的符号文件名称之间建立连接。它包括多级映射，以便映射文件的字符串名称到特定设备驱动器和设备地址，然后到I/O端口和总线控制器的物理地址。
 
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/lifeofio.jpg" alt="I/O请求的生命周期" width=350  align=center >
+<img  src="../images/lifeofio.jpg" alt="I/O请求的生命周期" width=350  align=center >
 ***
 **流**提供了一种框架的实现和方法，以采用模块化和增量的方法来编写设备驱动程序和网络协议。通过流，驱动程序可以堆叠，数据可以按单项和双向来传输和处理。
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/stream.png" alt="流结构" width=300  align=center >
+<img  src="../images/stream.png" alt="流结构" width=300  align=center >
 
 **性能**
 由于物理设备和应用程序之间的多个软件层，I/O系统调用消耗的CPU周期较多。
 这些层意味着多种开销：穿过内核保护边界的上下文切换、I/O设备的信号和中断处理、内核缓冲和应用程序空间之间的数据复制所需的CPU和内存系统的负载。
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/intercomputer.jpg" alt="计算计之间的通信" width=350  align=center >
+<img  src="../images/intercomputer.jpg" alt="计算计之间的通信" width=350  align=center >
 ***
 
 
@@ -839,7 +839,7 @@ DMA控制器和设备控制器之间的握手，通过一对称为DMA请求和DM
 
 **访问矩阵**
 访问矩阵是一个通用的保护模型，它提供了一种保护机制，而无需对系统或用户施加特定的保护策略。行表示域，列表示对象。
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/matrix.jpg" alt="访问矩阵" width=500  align=center >
+<img  src="../images/matrix.jpg" alt="访问矩阵" width=500  align=center >
 策略和机制的分离是重要的设计原则。
 * switch切换：切换进程从一个域到另一个域。
 * copy复制：复制访问矩阵的一个域的访问权限到另外一个。
@@ -914,8 +914,8 @@ SSL在传输层提供安全。
 预防或检测安全事故的方法包括：入侵检测系统、防病毒软件、系统事件的审计和记录、系统软件更改的监控、系统调用监控和防火墙。
 
 ***
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/linux.jpg" alt="Linux系统结构" width=450  align=center >
+<img  src="../images/linux.jpg" alt="Linux系统结构" width=450  align=center >
 
 ***
 
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/windows.jpg" alt="Windows结构图" width=600  align=center >
+<img  src="../images/windows.jpg" alt="Windows结构图" width=600  align=center >

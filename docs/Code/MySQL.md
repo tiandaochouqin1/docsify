@@ -42,7 +42,7 @@ date: 2021-03-02 23:52:07
 InnoDB，它是 MySQL5.5 版本之后默认的存储引擎。
 
 # MySQL指令执行过程
-![SQL_Process](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/SQL_Process.png)
+![SQL_Process](../images/SQL_Process.png)
 1. 语法检查：检查 SQL 拼写是否正确。
 2. 语义检查：检查 SQL 中的访问对象是否存在。
 3. 权限检查：看用户是否具备访问该数据的权限。
@@ -55,7 +55,7 @@ InnoDB，它是 MySQL5.5 版本之后默认的存储引擎。
 5. 优化器：优化器中就是要进行硬解析，也就是决定怎么做，比如创建解析树，生成执行计划。
 6. 执行器：当有了解析树和执行计划之后，就知道了 SQL 该怎么被执行，这样就可以在执行器中执行语句了。
 
-![MySQL_CS](https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/MySQL_CS.png)
+![MySQL_CS](../images/MySQL_CS.png)
 
 
 ```
@@ -209,7 +209,7 @@ DCL:Data Control Language,grant 、revoke。
 ## 框架
 
 
-<img src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/MySQLStruct.png" width = "700"  alt="MySQLStruct" align=center />
+<img src="../images/MySQLStruct.png" width = "700"  alt="MySQLStruct" align=center />
 
 
 一个InnoDB表包含两部分：表结构定义和表数据。
@@ -226,7 +226,7 @@ InnoDB刷脏页的控制策略
 脏页：被修改过的、与磁盘数据页不一致的内存数据页。
 innodb_io_capacity ：根据磁盘io速度配置。
 innodb_flush_neighbors：同时刷相邻脏页。
-<img src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/FlushDirtPage.png" width = "600"  alt="FlushDirtPage" align=center />
+<img src="../images/FlushDirtPage.png" width = "600"  alt="FlushDirtPage" align=center />
 
 
 ## 日志模块
@@ -244,7 +244,7 @@ innodb_flush_log_at_trx_commit=1 每次事务都持久化到磁盘 | sync_binlog
 减少刷盘次数 | 事务commit时刷盘。用于归档，主从复制和数据恢复
 
 redolog buffer：在commit前，redo log记录每一次的操作并保存在此内存rebo buffer中，commit后才写到redo log文件。
-<img src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/2StepCommit2.png" width = "500"  alt="2StepCommit2" align=center />
+<img src="../images/2StepCommit2.png" width = "500"  alt="2StepCommit2" align=center />
 
 为了保持两份日志的逻辑一致性（即保证用这两份log恢复出来的数据是一样的），将 redo log 的写入拆成了两个步骤：prepare 和 commit，即"两阶段提交"。（数据恢复时可由binlog commit记录退出redo log commit）。
 在进行恢复时事务要提交还是回滚，是由Binlog来决定的。当binlog commit即确认事务已经提交，否则回滚（包括prepare redo log）。
@@ -254,7 +254,7 @@ CrashSafe指MySQL服务器宕机重启后，能够保证：
 　　– 所有没有提交的事务的数据自动回滚。
 
 崩溃恢复当发生数据页级别的丢失，redolog才能恢复,故redolog是必需的。
-<img src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/2StepCommit.png" width = "500"  alt="2StepCommit" align=center />
+<img src="../images/2StepCommit.png" width = "500"  alt="2StepCommit" align=center />
 
 
 
@@ -279,7 +279,7 @@ ACID:事务四大属性
 3. 可重复读：repeatable read，一个事务的执行过程中看到的数据是不变的，即和该事务启动时看到的数据一样。此时此事务未提交的变更对其它事务是不可见的。
 4. 串行化：serializable,对于同一行数据的变更会加读、写锁，锁冲突时需要等待前一个事务释放锁。
 
-<img src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/TransanctionIsolationLevels.png" width = "400"  alt="TransanctionIsolationLevels" align=center />
+<img src="../images/TransanctionIsolationLevels.png" width = "400"  alt="TransanctionIsolationLevels" align=center />
 
 各个事务隔离级别下V1、V2、V3的值分别是：读未提交-222；读已提交-122；可重复读-112；串行化-112.
 
@@ -374,7 +374,7 @@ select city,name,age from t where city='杭州' order by name limit 1000  ;
 rowid：若存在主键则为主键，若没有主键InnoDB等引擎会生成一个6字节的rowid来唯一标识数据行。
 随机排序：
 order by rand() ：开销大，使用了内存临时表，内存临时表排序的时候使用了 rowid 排序方法。
-<img src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/RandSort.png" width = "600"  alt="RandSort" align=center />
+<img src="../images/RandSort.png" width = "600"  alt="RandSort" align=center />
 
 
 

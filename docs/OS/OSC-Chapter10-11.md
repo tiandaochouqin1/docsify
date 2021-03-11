@@ -37,7 +37,7 @@ categories: 课程学习
 
 # 文件系统的实现
 **文件系统结构**
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/filesys.jpg" alt="分层设计的文件系统" width=150  align=center >
+<img  src="../images/filesys.jpg" alt="分层设计的文件系统" width=150  align=center >
 
 **I/O控制层：**包括设备驱动程序和中断处理程序，以在主内存和磁盘系统之间传输消息。
 **基本文件系统：**只需向适当的设备驱动程序发送通用指令，以读取和写入磁盘的物理块。
@@ -62,7 +62,7 @@ categories: 课程学习
 ***
 **虚拟文件系统**
 文件系统的实现由三个主要层组成。如图所示：
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/vfs.jpg" alt="虚拟文件系统示意图" width=300  align=center >
+<img  src="../images/vfs.jpg" alt="虚拟文件系统示意图" width=300  align=center >
 第一层为文件系统接口，基于open()、read()、write()和close()调用即文件描述符。
 第二层为虚拟文件系统层ＶＦＳ。1) 文件系统的通用操作和实现分开。2) 提供一种机制，以唯一表示网络上的文件。
 第三层实现文件系统类型或远程文件系统协议的层。
@@ -81,7 +81,7 @@ categories: 课程学习
 **索引分配**：将所有指针放到一起，即索引块。支持直接访问。UNIX的innode。
 每个文件都有自己的索引块，这是一个磁盘块地址的指针。目录则包含索引块的地址。
 索引表空间和文件索引时间开销大。
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/innode.jpg" alt="Unix的innode" width=400  align=center >
+<img  src="../images/innode.jpg" alt="Unix的innode" width=400  align=center >
 
 ***
 **空闲空间管理**

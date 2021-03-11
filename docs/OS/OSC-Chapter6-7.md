@@ -22,7 +22,7 @@ categories: 课程学习
 # 同步
 竞争条件：多个进程并发访问和操作同一数据，并且执行结果与特定访问顺序有关。
 每个进程有一段代码，称为**临界区**，进程在执行该区时可能修改公共变量、更新一个表、写一个文件等。当一个系统在临界区内执行时，其他进程不允许在他们的临界区内执行。
-<img  src="https://raw.githubusercontent.com/tiandaochouqin1/Sources/main/images/critical.jpg" alt="" width=300  align=center >
+<img  src="../images/critical.jpg" alt="" width=300  align=center >
 
 临界区问题的解决方案应满足如下三条要求：**互斥、进步、有限等待。**
 ***
