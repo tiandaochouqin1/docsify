@@ -276,8 +276,8 @@ ACID:事务四大属性
 事务隔离级别：
 1. 读未提交：read uncommitted，事务尚未提交时，其变更就能被其它事务看到。
 2. 读已提交：read committed,事务提交后，其所做的变更才能被其它事务看到。
-3. 可重复读：repeatable read，一个事务的执行过程中看到的数据是不变的，即和该事务启动时看到的数据一样。此时此事务未提交的变更对其它事务是不可见的。
-4. 串行化：serializable,对于同一行数据的变更会加读、写锁，锁冲突时需要等待前一个事务释放锁。
+3. 可重复读：repeatable read，一个事务的执行过程中看到的数据是不变的，即和该事务启动时看到的数据一样。此时此事务未提交的变更对其它事务是不可见的。**InnodDB的默认事务隔离级别**。
+4. 串行化：serializable,对于同一行数据的变更会加读、写锁，锁冲突时需要等待前一个事务释放锁。在SERIALIZBLE的事务隔离级别，InnoDB存储引擎会对每个SELECT语句后自动加上`LOCK IN SHARE MODE`，即给每个读取操作加一个共享锁。update 的加锁语义和 select …for update（当前读） 是一致的。
 
 <img src="../images/TransanctionIsolationLevels.png" width = "400"  alt="TransanctionIsolationLevels" align=center />
 
@@ -292,6 +292,8 @@ ACID:事务四大属性
 
 2. 当前读：更新语句。更新数据都是先读后写的，只能读当前已提交的最新的值。
 
+
+幻读：一个事务的前后两次相同范围查询中，后一个查询看到了前一个查询没看到的行。在默认的可重复读级别下，只在当前读模式下出现，且专指新插入的行。可使用间隙锁来解决（锁住更多的行）。
 
 ## 索引
 索引算法：
@@ -355,7 +357,7 @@ FTWRL：Flush Tables With Read Lock，**全局读锁**，即只读，其它命�
 3. 等行锁：
 
 查询慢：
-1. select默认为一致性读，当事务进行中要读取的行被修改过很多次时，本查询需要进行多次undo才能获得一致性结果。当前读的命令为`lock in share mode`。
+1. select默认为一致性读，当事务进行中要读取的行被修改过很多次时，本查询需要进行多次undo才能获得一致性结果。select加`lock in share mode`则为当前读。
 
 ## 排序
 ORDER BY
@@ -402,17 +404,19 @@ where id = 10000 -1
 
 
 ## TODO
-> MySQL实战45讲-第20讲 幻读是什么
-1. 后面的课程含金量逐渐下降；
+> 21丨为什么我只改一行的语句，锁这么多？.html
+问题：
+1. 后面的课程理论知识减少，而实践问题的细节增多；
 2. 内容较为分散，体系不够清晰；
 3. 部分内容覆盖不完整（与其它网络资料相比）。
 
+计划：
 1. 可选择感兴趣的问题看，作为问题手册，而不是学习文档；
 2. 需要复习；
 3. 考虑找本书先看看（`数据库系统概念/高性能MYSQL`）。
 
 
-**参考资料：**
+**其它参考资料：**
 
 1. [『浅入浅出』MySQL 和 InnoDB](https://draveness.me/mysql-innodb/)
 
@@ -421,7 +425,6 @@ where id = 10000 -1
 3. [B树和B+树的插入、删除图文详解](https://www.cnblogs.com/nullzx/p/8729425.html)
 
 4. [MySQL 事务隔离级别和锁](https://developer.ibm.com/zh/technologies/databases/articles/os-mysql-transaction-isolation-levels-and-locks/)
-
 
 
 **数据库的关键内容：**

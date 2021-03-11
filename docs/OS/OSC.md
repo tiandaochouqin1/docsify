@@ -4,8 +4,6 @@ tags: 操作系统
 categories: 课程学习
 ---
 
-<font face="微软雅黑"></font>
-
 <!-- more -->
 
 - [OSC](#osc)
