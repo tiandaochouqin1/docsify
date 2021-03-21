@@ -1,6 +1,6 @@
 
 <!-- docs/_sidebar.md -->
-* [Home](/)
+* [Menu](/)
   * [Network](/Net/)
   * [OS](/OS/)
   * [Code](/Code/)
