@@ -2,12 +2,11 @@
 
 <!-- ![logo](_media/icon.svg) -->
 
-# docsify <small>4</small>
+# Dcsify <small>4</small>
 
-> A magical documentation site generator.
+> You Can Do Whaterver You Want.
 
-> Roll Down ↓
-
+>   ↓
 
 
 
