@@ -2,7 +2,7 @@
 
 <!-- ![logo](_media/icon.svg) -->
 
-# Dcsify <small>4</small>
+# Docsify <small>4</small>
 
 > You Can Do Whaterver You Want.
 
