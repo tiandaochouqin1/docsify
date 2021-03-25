@@ -1,7 +1,7 @@
 ---
 title: OSC
 tags: 操作系统
-categories: 课程学习
+categories: 学习笔记
 ---
 
 <!-- more -->
@@ -108,7 +108,8 @@ categories: 课程学习
 
 [有没有好的操作系统的书](https://www.zhihu.com/question/31863104)
 1. 推荐[Operating Systems: Three Easy Pieces ](https://pages.cs.wisc.edu/~remzi/OSTEP/)：众多US高校的教材。[PDF](../files/OPERATING%20SYSTEMS%20Three%20Pieces.pdf ":ignore")
-2. 实践第一：[6.828 实现xv6](https://pdos.csail.mit.edu/6.S081/2020/)。
+2. 实践第一：[6.828 实现xv6](https://pdos.csail.mit.edu/6.S081/2020/)
+   
    [知乎-MIT 6.828 实现操作系统](https://zhuanlan.zhihu.com/c_1273723917820215296)
 
 ## 其它参考文章
