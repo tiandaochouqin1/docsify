@@ -107,7 +107,7 @@ categories: 学习笔记
 
 
 [有没有好的操作系统的书](https://www.zhihu.com/question/31863104)
-1. 推荐[Operating Systems: Three Easy Pieces ](https://pages.cs.wisc.edu/~remzi/OSTEP/)：众多US高校的教材。[PDF](../files/OPERATING%20SYSTEMS%20Three%20Pieces.pdf ":ignore")
+1. 推荐[Operating Systems: Three Easy Pieces ](https://pages.cs.wisc.edu/~remzi/OSTEP/)：众多US高校的教材。[PDF](../bookss/OPERATING%20SYSTEMS%20Three%20Pieces.pdf ":ignore")
 2. 实践第一：[6.828 实现xv6](https://pdos.csail.mit.edu/6.S081/2020/)
    
    [知乎-MIT 6.828 实现操作系统](https://zhuanlan.zhihu.com/c_1273723917820215296)
@@ -1086,7 +1086,7 @@ I/O端口通常由四个寄存器组成，即状态寄存器、控制寄存器�
 <img  src="../images/InterrupHandler.png" alt="InterrupHandler" width=500  align=center >
 
 
->参考[ARM System Developer’s Guide Designing and Optimizing System Software](../files/ARM_System_Developers_Guide-Designing_and_Optimizing_System_Software.pdf ":ingore")
+>参考[ARM System Developer’s Guide Designing and Optimizing System Software](../books/ARM_System_Developers_Guide-Designing_and_Optimizing_System_Software.pdf ":ingore")
 
 - 非屏蔽中断：保留用于诸如不可恢复的内存错误等事件。
 - 可屏蔽中断：在执行不得中断的关键指令序列之前，可由CPU关闭。
