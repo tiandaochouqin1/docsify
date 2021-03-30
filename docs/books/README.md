@@ -2,6 +2,8 @@
 
 [仓库地址](https://github.com/tiandaochouqin1/docsify/tree/main/docs/books)
 
+存网盘比较好。github上传单文件容易失败，且单文件限制100m。
+
 1. TCP/IP协议详解
    - 卷一
    - 卷二
