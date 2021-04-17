@@ -3,7 +3,7 @@
 * [Menu](/)
   * [Network](/Net/)
   * [OS](/OS/)
-  * [Code](/Code/)
+  * [Language](/Language/)
 
 * [Books](/books/)
 * [NetDisk](https://webxp.ml/onedrive/)

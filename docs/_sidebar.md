@@ -5,5 +5,5 @@
 * [Home](/)
 * [Network](/Net/)
 * [OS](/OS/)
-* [Code](/Code/)
+* [Language](/Language/)
 <!-- * [Web](/Web/) -->
