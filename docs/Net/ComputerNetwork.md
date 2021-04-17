@@ -66,7 +66,12 @@ categories:  学习笔记
   - [移动IP](#移动ip)
   - [无线和移动性对运输层和应用层的影响](#无线和移动性对运输层和应用层的影响)
 - [计算机网络中的安全](#计算机网络中的安全)
-- [LAB](#lab)
+- [套接字编程](#套接字编程-1)
+  - [Web Server](#web-server)
+  - [UDP Ping](#udp-ping)
+  - [Proxy Server](#proxy-server)
+  - [SMTP Client](#smtp-client)
+- [Wireshark LAB](#wireshark-lab)
 
 # 计算机网络 自顶而下方法
 
@@ -968,6 +973,26 @@ TCP拥塞控制隐含假设报文的丢失是由于拥塞而非出错或切换�
 
 >>此处需要系统学习安全类书籍
 
-# LAB
+
+# 套接字编程
+获取assignment需要为教师或付费，只找到Solutions。
+
+
+
+>注意关闭安全软件！！！
+
+## Web Server
+
+
+## UDP Ping
+
+## Proxy Server
+
+## SMTP Client
+
+
+
+
+# Wireshark LAB
 
 >>物理层如何理解？

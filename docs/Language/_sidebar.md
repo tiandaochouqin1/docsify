@@ -5,6 +5,6 @@
 * [Home](/)
 * [Language](/Language/)
 * [Java](/Language/Java.md)
-<!-- * [MySQL](/Language/MySQL.md) -->
-<!-- * [DesignPattern](/Language/DesignPattern.md) -->
+* [MySQL](/Language/MySQL.md)
+* [DesignPattern](/Language/DesignPattern.md)
 * [regex](/Language/regex.md)
